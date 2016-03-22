@@ -15,7 +15,7 @@ Able to export:
 * svg image
 * png image
 
-FYI Quartz code is a drawing code for iOS and MacOS.
+FYI Quartz code is a drawing code for iOS and OS X.
 
 After turning vector image to drawing code, then add the drawing code into the project and compile. During runtime, the image will be redrawn and rescale size without distortion.
 
