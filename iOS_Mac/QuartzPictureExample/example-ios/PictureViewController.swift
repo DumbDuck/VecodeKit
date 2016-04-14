@@ -34,7 +34,7 @@ class PictureViewController : UIViewController
     
     override func loadView() {
         self.view = _pictureView
-        _pictureView.backgroundColor = UIColor.whiteColor()
+        _pictureView.backgroundColor = UIColor.lightGrayColor()
     }
 }
 
