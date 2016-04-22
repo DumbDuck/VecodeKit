@@ -1,0 +1,66 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+/en/home:
+  title: "Introduction"
+  url: "../en/home.html"
+  link: "<a href='../en/home.html'>Introduction</a>"
+
+
+ 
+/en/use_vecode:
+  title: "Use Vecode"
+  url: "../en/use_vecode.html"
+  link: "<a href='../en/use_vecode.html'>Use Vecode</a>"
+
+
+ 
+/en/use_quartz_code:
+  title: "Use the Exported Drawing Code in iOS/Mac Project"
+  url: "../en/use_quartz_code.html"
+  link: "<a href='../en/use_quartz_code.html'>Use the Exported Drawing Code in iOS/Mac Project</a>"
+
+
+ 
+/en/use_android_graphics_code:
+  title: "Use the Exported Drawing Code in Android Project"
+  url: "../en/use_android_graphics_code.html"
+  link: "<a href='../en/use_android_graphics_code.html'>Use the Exported Drawing Code in Android Project</a>"
+
+
+ 
+/en/version_history:
+  title: "Version History"
+  url: "../en/version_history.html"
+  link: "<a href='../en/version_history.html'>Version History</a>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content=" ">
+    <title>在 Android 项目中使用导出的代码 | Vecode Help</title>
+    <link rel="stylesheet" type="text/css" href="../css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+    <link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/jquery.navgoco.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/anchor.min.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="../js/customscripts.js"></script>
+    <link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container topnavlinks">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle"> Vecode v1.1</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- entries without drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li><a href="../en/use_android_graphics_code.html">英文</a></li>
+                    <li><a href="https://github.com/DumbDuck/VecodeKit" target="_blank">VecodeKit</a></li>
+                    <!-- entries with drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li class="dropdown">
+                        <!-- special insertion -->
+                        <!-- Send feedback function -->
+                        <script>
+                        function SendLinkByMail(href) {
+                            var subject = "Vecode Help feedback";
+                            var body = "I have some feedback about the 在 Android 项目中使用导出的代码 page: ";
+                            body += window.location.href;
+                            body += "";
+                            var uri = "mailto:dumbduck@126.com?subject=";
+                            uri += "Vecode 反馈";
+                            uri += "&body=";
+                            uri += "";
+                            window.location.href = uri;
+                        }
+                        </script>
+                        <li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> 反馈</a></li>
+            </div>
+            <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <script>
+                $(document).ready(function() {
+                    // Initialize navgoco with default options
+                    $("#mysidebar").navgoco({
+                        caretHtml: '',
+                        accordion: true,
+                        openClass: 'active', // open
+                        save: false, // leave false or nav highlighting doesn't work right
+                        cookie: {
+                            name: 'navgoco',
+                            expires: false,
+                            path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                        }
+                    });
+
+                    $("#collapseAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', false);
+                    });
+
+                    $("#expandAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', true);
+                    });
+
+                });
+                </script>
+                <ul id="mysidebar" class="nav">
+                    <span class="siteTagline"></span>
+                    <span class="versionTagline"></span>
+                    <li><a href="#">帮助</a>
+                        <ul>
+                            <li><a href="../cn/home.html">介绍</a></li>
+                            <li><a href="../cn/use_vecode.html">使用 Vecode</a></li>
+                            <li><a href="../cn/use_quartz_code.html">在 iOS 或 Mac 项目中使用导出的代码</a></li>
+                            <li class="active"><a href="../cn/use_android_graphics_code.html">在 Android 项目中使用导出的代码</a></li>
+                            <li><a href="../cn/version_history.html">版本记录</a></li>
+                        </ul>
+                        <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+            </div>
+            <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+            <script>
+            $("li.active").parents('li').toggleClass("active");
+            </script>
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <div class="post-header">
+                    <h1 class="post-title-main">在 Android 项目中使用导出的代码</h1>
+                </div>
+                <div class="post-content">
+                    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+                    <script>
+                    $(document).ready(function() {
+                        // Handler for .ready() called.
+
+                        $('#toc').toc({
+                            minimumHeaders: 0,
+                            listType: 'ul',
+                            showSpeed: 0,
+                            headers: 'h2,h3,h4'
+                        });
+
+                        /* this offset helps account for the space taken up by the floating toolbar. */
+                        $('#toc').on('click', 'a', function() {
+                            var target = $(this.getAttribute('href')),
+                                scroll_target = target.offset().top
+
+                            $(window).scrollTop(scroll_target - 10);
+                            return false
+                        })
+
+                    });
+                    </script>
+                    <div id="toc"></div>
+                    <p>如何导出 Android graphics code，请参考<a href="./use_vecode.html#export_anchor">这里</a>。</p>
+                    <p>假设我们导出 Android graphics code 时选择文件名为 PictureTiger，包名为 <code>com.example</code> 就导出一个文件 PictureTiger.java，其中定义类 <code>com.example.PictureTiger</code>。</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">PictureTiger</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.graphics.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.vecodekit.GraphicsPicture</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PictureTiger</span> <span class="kd">extends</span> <span class="n">GraphicsPicture</span>
+<span class="o">{</span>
+    <span class="n">xxxxx</span>
+<span class="o">}</span>
+</code></pre></div>
+                    <p>此时我们还缺少了 <code>com.vecodekit.GraphicsPicture</code> 的代码，这代码可以在 VecodeKit 中找到。</p>
+                    <h2>获取 VeocdeKit</h2>
+                    <p>您可以在 <a href="https://github.com/DumbDuck/VecodeKit">GitHub </a> 下载到最新的 VecodeKit 代码，也可以点击菜单项 <b>Copy VecodeKit...</b> 将其复制到本机中。</p>
+                    <p>
+                        <image src="../images/vecodekit_menu.png" width="416" />
+                    </p>
+                    <p>解压后，在 VecodeKit/Android/src 下可以找到 <code>com.vecodekit</code> 的代码。另外 VecodeKit/Android/VecodeKitExample 是一个 Android Studio 的<a href="./home.html#android_example_anchor">工程例子</a>，演示了怎么使用导出的绘图代码。</p>
+                    <h2>使用 GraphicsPicture</h2>
+                    <p>将 VecodeKit/Android/src 下的代码添加到您的项目中，并且将导出的 Android graphics code 文件也添加到项目中。</p>
+                    <p>比如导出了 PictureTiger.java 文件，定义了 <code>com.example.PictureTiger</code> 类。PictureTiger.java 添加到项目后，就可以调用函数：</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">PictureTiger</span> <span class="n">tiger</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">PictureTiger</span><span class="o">();</span>
+<span class="n">tiger</span><span class="o">.</span><span class="na">drawInRect</span><span class="o">(</span><span class="n">rect</span><span class="o">,</span> <span class="n">canvas</span><span class="o">,</span> <span class="n">PictureContentMode</span><span class="o">.</span><span class="na">ScaleAspectFit</span><span class="o">);</span>
+</code></pre></div>
+                    <p>将图片绘制到 canvas 上。</p>
+                    <p>或者使用如下代码，将 <code>tiger</code> 转成 <code>Bitmap</code>。</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Bitmap</span> <span class="n">bitmap</span> <span class="o">=</span> <span class="n">tiger</span><span class="o">.</span><span class="na">transToBitmap</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="n">PictureContentMode</span><span class="o">.</span><span class="na">ScaleAspectFit</span><span class="o">);</span>
+</code></pre></div>
+                    <h2>GraphicsPicture API</h2>
+                    <h3>getWidth，getHeight</h3>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kt">float</span> <span class="nf">getWidth</span><span class="o">();</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kt">float</span> <span class="nf">getHeight</span><span class="o">();</span>
+</code></pre></div>
+                    <p>这两个函数取得图片原始大小。比如您需要绘制 2 倍大小 Bitmap，可以使用如下代码：</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">float</span> <span class="n">bitmapWidth</span> <span class="o">=</span> <span class="n">tiger</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">float</span> <span class="n">bitmapHeight</span> <span class="o">=</span> <span class="n">tiger</span><span class="o">.</span><span class="na">getHeight</span><span class="o">()</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+<span class="n">Bitmap</span> <span class="n">bitmap</span> <span class="o">=</span> <span class="n">tiger</span><span class="o">.</span><span class="na">transToBitmap</span><span class="o">(</span><span class="n">bitmapWidth</span><span class="o">,</span> <span class="n">bitmapHeight</span><span class="o">);</span>
+</code></pre></div>
+                    <h3>drawInRect</h3>
+                    <p>这个是最核心的函数，将 picture 绘制到 canvas 上面。</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kt">void</span> <span class="nf">drawInRect</span><span class="o">(</span><span class="n">RectF</span> <span class="n">rect</span><span class="o">,</span> <span class="n">Canvas</span> <span class="n">canvas</span><span class="o">,</span> <span class="kt">int</span> <span class="n">contentMode</span><span class="o">);</span>
+</code></pre></div>
+                    <p>rect 表示图片绘制的矩形大小；canvas 是绘图环境。最后一参数 <code>contentMode</code> 表示了如何缩放图片以便适应传入的 rect，可以有如下数值。</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PictureContentMode</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ScaleToFill</span>       <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ScaleAspectFit</span>    <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">AspectFill</span>        <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">Center</span>            <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+                    <p>比如下面的一张老虎图片，绘画在相同的 rect 上（红色框表示），使用不同的 mode 会得到不同的结果：</p>
+                    <p>
+                        <image src="../images/tiger.png" width="250" />
+                    </p>
+                    <table border="1px" style="table-layout:fixed;width:100%">
+                        <tr border="0" style="text-align:center">
+                            <td border="0" style="width:25%">ScaleToFill</th>
+                                <td border="0" style="width:25%">ScaleAspectFit</th>
+                                    <td border="0" style="width:25%">ScaleAspectFill</th>
+                                        <td border="0" style="width:25%">Center</th>
+                        </tr>
+                        <tr border="0">
+                            <td border="0" style="width:25%"><img src="../images/ScaleToFill.png" border="0" width="100%"></td>
+                            <td border="0" style="width:25%"><img src="../images/ScaleAspectFit.png" border="0" width="100%"></td>
+                            <td border="0" style="width:25%"><img src="../images/ScaleAspectFill.png" border="0" width="100%"></td>
+                            <td border="0" style="width:25%"><img src="../images/ScaleCenter.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h3>transToBitmap</h3>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="n">Bitmap</span> <span class="nf">transToBitmap</span><span class="o">(</span><span class="kt">float</span> <span class="n">width</span><span class="o">,</span> <span class="kt">float</span> <span class="n">height</span><span class="o">,</span> <span class="kt">int</span> <span class="n">contentMode</span><span class="o">);</span>
+</code></pre></div>
+                    <p>这个函数可以将 GraphicsPicture 转换成 Bitmap。最后一参数 <code>contentMode</code> 的含义见上面。</p>
+                    <!-- <div class="tags">
+    
+</div> -->
+                </div>
+                <footer>
+                    <!--             <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Your company. All rights reserved. <br />
+ Site last generated: Apr 22, 2016 <br />
+<p><img src="../../common_images/company_logo.png"/></p>
+                </div>
+            </div> -->
+                </footer>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+</body>
+
+</html>

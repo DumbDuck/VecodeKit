@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="getting_started,  ">
+    <title> 欢迎使用 Vecode | Vecode Help</title>
+    <link rel="stylesheet" type="text/css" href="../css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+    <link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/jquery.navgoco.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/anchor.min.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="../js/customscripts.js"></script>
+    <link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container topnavlinks">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle"> Vecode v1.1</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- entries without drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li><a href="../en/home.html">英文</a></li>
+                    <li><a href="https://github.com/DumbDuck/VecodeKit" target="_blank">VecodeKit</a></li>
+                    <!-- entries with drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li class="dropdown">
+                        <!-- special insertion -->
+                        <!-- Send feedback function -->
+                        <script>
+                        function SendLinkByMail(href) {
+                            var subject = "Vecode Help feedback";
+                            var body = "I have some feedback about the Introduction page: ";
+                            body += window.location.href;
+                            body += "";
+                            var uri = "mailto:dumbduck@126.com?subject=";
+                            uri += "Vecode 反馈";
+                            uri += "&body=";
+                            uri += "";
+                            window.location.href = uri;
+                        }
+                        </script>
+                        <li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> 反馈</a></li>
+            </div>
+            <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <script>
+                $(document).ready(function() {
+                    // Initialize navgoco with default options
+                    $("#mysidebar").navgoco({
+                        caretHtml: '',
+                        accordion: true,
+                        openClass: 'active', // open
+                        save: false, // leave false or nav highlighting doesn't work right
+                        cookie: {
+                            name: 'navgoco',
+                            expires: false,
+                            path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                        }
+                    });
+
+                    $("#collapseAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', false);
+                    });
+
+                    $("#expandAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', true);
+                    });
+
+                });
+                </script>
+                <ul id="mysidebar" class="nav">
+                    <span class="siteTagline"></span>
+                    <span class="versionTagline"></span>
+                    <li><a href="#">帮助</a>
+                        <ul>
+                            <li class="active"><a href="../cn/home.html">介绍</a></li>
+                            <li><a href="../cn/use_vecode.html">使用 Vecode</a></li>
+                            <li><a href="../cn/use_quartz_code.html">在 iOS 或 Mac 项目中使用导出的代码</a></li>
+                            <li><a href="../cn/use_android_graphics_code.html">在 Android 项目中使用导出的代码</a></li>
+                            <li><a href="../cn/version_history.html">版本记录</a></li>
+                        </ul>
+                        <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+            </div>
+            <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+            <script>
+            $("li.active").parents('li').toggleClass("active");
+            </script>
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <div class="post-header">
+                    <h1 class="post-title-main"> 欢迎使用 Vecode </h1>
+                </div>
+                <div class="post-content">
+                    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+                    <script>
+                    $(document).ready(function() {
+                        // Handler for .ready() called.
+
+                        $('#toc').toc({
+                            minimumHeaders: 0,
+                            listType: 'ul',
+                            showSpeed: 0,
+                            headers: 'h2,h3,h4'
+                        });
+
+                        /* this offset helps account for the space taken up by the floating toolbar. */
+                        $('#toc').on('click', 'a', function() {
+                            var target = $(this.getAttribute('href')),
+                                scroll_target = target.offset().top
+
+                            $(window).scrollTop(scroll_target - 10);
+                            return false
+                        })
+
+                    });
+                    </script>
+                    <div id="toc"></div>
+                    <h2>介绍</h2>
+                    <p>
+                        <image src="../images/vecode_icon.png" width="200" height="200" />
+                    </p>
+                    <p>Vecode 的意思是 <b>Vec</b>tor + <b>code</b>，可以将矢量图片转换成绘图代码或者 svg。</p>
+                    <p>到目前为止，Vecode 支持导入：</p>
+                    <ul>
+                        <li>swf 格式的矢量图。</li>
+                    </ul>
+                    <p>支持导出：</p>
+                    <ul>
+                        <li>Quartz code (Objective-C)</li>
+                        <li>Quartz code (Swift)</li>
+                        <li>Android graphics code</li>
+                        <li>svg 图片</li>
+                        <li>png 图片</li>
+                    </ul>
+                    <p>其中 Quartz code 是 iOS 或者 Mac 平台上的绘图代码。而 Android graphics code，顾名思义，就是 Android 平台上的绘图代码。</p>
+                    <p>将矢量图片转换成绘图代码后，将代码添加到项目工程中编译，运行时将图片重新绘制出来。这样随意放大缩小，图片也不会失真。</p>
+                    <h2>VecodeKit</h2>
+                    <p>我们编写了例子工程 VecodeKit，展示了如何使用导出的绘图代码。您可以在 <a href="https://github.com/DumbDuck/VecodeKit">GitHub </a> 下载到最新的 VecodeKit 代码，也可以点击菜单项 <b>Copy VecodeKit...</b> 将其复制到本机中。您也可以点击菜单项 <b>Vecode Help</b> 随时打开这份帮助文档。</p>
+                    <p>
+                        <image src="../images/vecodekit_menu.png" width="416" />
+                    </p>
+                    <p>VecodeKit 包含子目录</p>
+                    <ul>
+                        <li>iOS_Mac</li>
+                        <li>Android</li>
+                        <li>test_swf</li>
+                    </ul>
+                    <p>
+                        <a id="mac_example_anchor"></a>
+                        <b>iOS_Mac</b> 子目录，包含一个 iOS 的例子，也包含一个 Mac 的例子，分别展示了在 Swift 语言和 Objective-C 语言下如何使用 Quartz code。</p>
+                    <p><img src="../images/example_mac.png" width="600"></td>
+                    </p>
+                    <p>
+                        <a id="android_example_anchor"></a>
+                        <b>Android</b> 子目录，包含一个 Android Studio 的工程例子，展示了如何使用导出的 Android graphics code。</p>
+                    <p><img src="../images/example_android.png" width="300"></td>
+                    </p>
+                    <p>在 <b>test_swf</b> 子目录中，您可以找到一些测试用的 swf 文件。</p>
+                    <p>要获取更多 VecodeKit 和使用绘图代码的信息，请参考：</p>
+                    <ul>
+                        <li><a href="./use_quartz_code.html">在 iOS 或 Mac 项目中使用导出的代码</a></li>
+                        <li><a href="./use_android_graphics_code.html">在 Android 项目中使用导出的代码</a></li>
+                    </ul>
+                    <!-- <div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+    
+    
+    <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+    
+    
+    
+</div> -->
+                </div>
+                <footer>
+                    <!--             <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Your company. All rights reserved. <br />
+ Site last generated: Apr 22, 2016 <br />
+<p><img src="../../common_images/company_logo.png"/></p>
+                </div>
+            </div> -->
+                </footer>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+</body>
+
+</html>

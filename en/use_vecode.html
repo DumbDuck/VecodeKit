@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content=" ">
+    <title>Use Vecode | Vecode Help</title>
+    <link rel="stylesheet" type="text/css" href="../css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+    <link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/jquery.navgoco.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/anchor.min.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="../js/customscripts.js"></script>
+    <link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container topnavlinks">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle"> Vecode v1.1</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- entries without drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li><a href="../cn/use_vecode.html">Chinese</a></li>
+                    <li><a href="https://github.com/DumbDuck/VecodeKit" target="_blank">VecodeKit</a></li>
+                    <!-- entries with drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li class="dropdown">
+                        <!-- special insertion -->
+                        <!-- Send feedback function -->
+                        <script>
+                        function SendLinkByMail(href) {
+                            var subject = "Vecode Help feedback";
+                            var body = "I have some feedback about the Use Vecode page: ";
+                            body += window.location.href;
+                            body += "";
+                            var uri = "mailto:dumbduck@126.com?subject=";
+                            uri += "Vecode Feedback";
+                            uri += "&body=";
+                            uri += "";
+                            window.location.href = uri;
+                        }
+                        </script>
+                        <li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+            </div>
+            <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <script>
+                $(document).ready(function() {
+                    // Initialize navgoco with default options
+                    $("#mysidebar").navgoco({
+                        caretHtml: '',
+                        accordion: true,
+                        openClass: 'active', // open
+                        save: false, // leave false or nav highlighting doesn't work right
+                        cookie: {
+                            name: 'navgoco',
+                            expires: false,
+                            path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                        }
+                    });
+
+                    $("#collapseAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', false);
+                    });
+
+                    $("#expandAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', true);
+                    });
+
+                });
+                </script>
+                <ul id="mysidebar" class="nav">
+                    <span class="siteTagline"></span>
+                    <span class="versionTagline"></span>
+                    <li><a href="#">Help</a>
+                        <ul>
+                            <li><a href="../en/home.html">Introduction</a></li>
+                            <li class="active"><a href="../en/use_vecode.html">Use Vecode</a></li>
+                            <li><a href="../en/use_quartz_code.html">Use the Exported Drawing Code in iOS/Mac Project</a></li>
+                            <li><a href="../en/use_android_graphics_code.html">Use the Exported Drawing Code in Android Project</a></li>
+                            <li><a href="../en/version_history.html">Version History</a></li>
+                        </ul>
+                        <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+            </div>
+            <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+            <script>
+            $("li.active").parents('li').toggleClass("active");
+            </script>
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <div class="post-header">
+                    <h1 class="post-title-main">Use Vecode</h1>
+                </div>
+                <div class="post-content">
+                    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+                    <script>
+                    $(document).ready(function() {
+                        // Handler for .ready() called.
+
+                        $('#toc').toc({
+                            minimumHeaders: 0,
+                            listType: 'ul',
+                            showSpeed: 0,
+                            headers: 'h2,h3,h4'
+                        });
+
+                        /* this offset helps account for the space taken up by the floating toolbar. */
+                        $('#toc').on('click', 'a', function() {
+                            var target = $(this.getAttribute('href')),
+                                scroll_target = target.offset().top
+
+                            $(window).scrollTop(scroll_target - 10);
+                            return false
+                        })
+
+                    });
+                    </script>
+                    <div id="toc"></div>
+                    <h2 id="ui">UI</h2>
+                    <p><img src="../images/vecode_black.png" border="0" width="600"></p>
+                    <p>The Vecode interface has 4 main sections:</p>
+                    <ul>
+                        <li>The right side the <b>Parts Selection Column</b>.</li>
+                        <li>The top the <b>Tool Bar</b>.</li>
+                        <li>Below the tool bar, the <b>Frames Selection Bar</b></li>
+                        <li>Below the frames selection bar, the <b>Preview Zoon</b>。</li>
+                    </ul>
+                    <h2 id="parts-selection-column">Parts Selection Column</h2>
+                    <p>
+                        <image src="../images/ui_part.png" width="200" />
+                    </p>
+                    <p>Some vector images contains several <b>PARTS</b>. As Adobe Flash can convert Shapes into Symbles, therefore every Symble has the corresbonding part(s). When choosing different parts in the column, the <b>Preview Zoon</b> will show the corresbonding image.</p>
+                    <h2 id="tool-bar">Tool Bar</h2>
+                    <p>
+                        <image src="../images/ui_toolbar.png" height="31" />
+                    </p>
+                    <p>The widgits on the Tool Bar are devided into 4 groups.</p>
+                    <h3 id="change-ui-theme">Change UI Theme</h3>
+                    <p>
+                        <image src="../images/toolbar_theme.png" height="31" />
+                    </p>
+                    <p>You can choose between 2 themes: Day Light &amp; Dark Night.</p>
+                    <table border="0" style="table-layout:fixed;width:100%">
+                        <tr border="0">
+                            <td border="0" style="width:50%"><img src="../images/vecode_white.png" border="0" width="100%"></td>
+                            <td border="0" style="width:50%"><img src="../images/vecode_black.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h3 id="export-settings">Export Settings</h3>
+                    <p>
+                        <image src="../images/toolbar_include.png" height="81" />
+                    </p>
+                    <p>There are 2 options:</p>
+                    <ul>
+                        <li>Document Size stands for exporting original document size.</li>
+                        <li>Minimum Area stands for exporting image right along its edges, leaving no surrounded transparent pixels.</li>
+                    </ul>
+                    <p>Check out the form below, the dash-line rectangle indicates the exported area.</p>
+                    <table border="1" style="table-layout:fixed;width:100%">
+                        <tr border="0" style="text-align:center">
+                            <td border="0" style="width:50%">Document Size</th>
+                                <td border="0" style="width:50%">Minimum Area</th>
+                        </tr>
+                        <tr border="0">
+                            <td border="0" style="width:50%"><img src="../images/toolbar_document_size.png" border="0" width="100%"></td>
+                            <td border="0" style="width:50%"><img src="../images/toolbar_minimum_area.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h3 id="jump">Jump</h3>
+                    <p>
+                        <image src="../images/toolbar_jump.png" height="31" />
+                    </p>
+                    <p>This 2 buttons can jump backward or forward to the ever-chosen parts whthin your action history, ecual to the menu items <b>Jump Backward</b> &amp; <b>Jump Forward</b>.</p>
+                    <p>
+                        <image src="../images/menu_view.png" height="197" />
+                    </p>
+                    <h3 id="preview-scailing">Preview Scailing</h3>
+                    <p>
+                        <image src="../images/toolbar_zoom.png" height="31" />
+                    </p>
+                    <p>Equal to menu items <b>Raw Size</b>, <b>Zoom Out</b>, <b>Zoom In</b>.</p>
+                    <p>
+                        <image src="../images/menu_view.png" height="197" />
+                    </p>
+                    <h2 id="frames-selection-bar">Frames Selection Bar</h2>
+                    <p>
+                        <image src="../images/frame_are.png" height="64" />
+                    </p>
+                    <p>In some circumstance within 1 Flash file we&#39;d new a few animation frames and each frame corresponding to 1 image.</p>
+                    <p>For example, the icons using in Vecode application were drawn in Flash, with each icon corresponding to 1 tagged frame, the numbers of frames are equal to those of the icons. And the tags&#39; name can be reflected on the names of the exported image files so to avoid redundant work.</p>
+                    <table border="0" style="table-layout:fixed;width:100%">
+                        <tr border="0">
+                            <td border="0" style="width:33%"><img src="../images/icon_0.png" border="0" width="100%"></td>
+                            <td border="0" style="width:33%"><img src="../images/icon_1.png" border="0" width="100%"></td>
+                            <td border="0" style="width:33%"><img src="../images/icon_2.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h2 id="preview-zoon">Preview Zoon</h2>
+                    <p>The Preview Zoon occupies is the largest section of the interface. The graphic within the dash-line rectangle is the output of the export action. Open a vector file by dragging it into the preview zoon. </p>
+                    <h3 id="shortcut-menu">Shortcut Menu</h3>
+                    <p>Hold your mouse within the preview zoon and right-click to callout the shortcut menu.</p>
+                    <p>
+                        <image src="../images/preview_menu.png" height="171" />
+                    </p>
+                    <p>The menu item <b>Reload</b> can reload the present file. </p>
+                    <h3 id="quick-jump">Quick Jump</h3>
+                    <p>
+                        <image src="../images/jump.png" width="400" />
+                    </p>
+                    <p>Press <code>Command + mouse left-click</code> to choose a part in the preview zoon leads to a pop-up quick jump menu.</p>
+                    <p>
+                        <a id="export_anchor"></a>
+                    </p>
+                    <h2 id="export">Export</h2>
+                    <p>Open a vector image file, click menu item <b>Export...</b> or use shortcut <code>Command + S</code> to callout the export dialog, then choose the format of export file.</p>
+                    <p>
+                        <a id="quartz_code_anchor"></a>
+                    </p>
+                    <h3 id="quartz-code">Quartz code</h3>
+                    <p>Quartz code is a 2D drawing code for iOS/Mac application development. It can fit in Objective-C and Swift.</p>
+                    <p>When exporting Quartz code there is a checkbox option <b> No color </b></p>
+                    <p>
+                        <image src="../images/save_code.png" height="65" />
+                    </p>
+                    <p>When serve as an icon or a button, the color of the vector image usually need being change under certain circumstances. For instance, a button&#39;s normal status is in white color, and in red color while being pushed.</p>
+                    <p>In this case the original color of button image serves no purpose. Then we can choose <b>No color</b> to unset the color of the exported drawing code.</p>
+                    <p>When you want to change the color, e.g using a exported <code>g_picture_icon_moon</code>, you can use</p>
+                    <div class="highlight"><pre><code class="language-text" data-lang="text">g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.redColor())
+g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.yellowColor())
+g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.blueColor())
+</code></pre></div>
+                    <p>to change it into different colors.</p>
+                    <p>Notice that if choosing the <b>No color</b> option, there cannot be exporting a linear color effect image.</p>
+                    <h3 id="android-graphics-code">Android graphics code</h3>
+                    <p>Android graphics code, AKA the drawing code on Android platform. </p>
+                    <p>
+                        <image src="../images/save_android_code.png" width="379" height="69" />
+                    </p>
+                    <p>The dawing code is a java file, which require a pakage name in the process of exportation. The last package name that you input will be automactically recorded by the program. </p>
+                    <p>For example, when you export a file as PictureTiger.java, package name as <code>com.example</code>, it will automactically define a class <code>com.example.PictureTiger</code>.</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">PictureTiger</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.graphics.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.vecodekit.GraphicsPicture</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PictureTiger</span> <span class="kd">extends</span> <span class="n">GraphicsPicture</span>
+<span class="o">{</span>
+    <span class="n">xxxxx</span>
+<span class="o">}</span>
+</code></pre></div>
+                    <!-- <div class="tags">
+    
+</div> -->
+                </div>
+                <footer>
+                    <!--             <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Your company. All rights reserved. <br />
+ Site last generated: Apr 22, 2016 <br />
+<p><img src="../../common_images/company_logo.png"/></p>
+                </div>
+            </div> -->
+                </footer>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+</body>
+
+</html>

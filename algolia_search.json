@@ -1,0 +1,102 @@
+[
+
+
+
+
+
+
+
+
+{
+"title": "Introduction",
+"tags": "getting_started",
+"keywords": "",
+"url": "../en/home.html",
+"summary": "",
+"body": "## IntroductionVecode is a blending word which combines Vector and Code. It helps developers and designers turn vector images to drawing codes or svg images.For now, Vecode is able to import:* swf vector formatAble to export:* Quartz code (Objective-C)* Quartz code (Swift)* Android graphics code* svg image* png imageFYI Quartz code is a drawing code for iOS and OS X. Android graphics code, AKA the drawing code on Android platform.After turning vector image to drawing code, then add the drawing code into the project and compile. During runtime, the image will be redrawn and rescale size without distortion.## VecodeKitWe've coded project example VecodeKit, showing how to use the exported drawing codes. You can download the latest VecodeKit on [GitHub ](https://github.com/DumbDuck/VecodeKit), or click the menu item Copy VecodeKit... and copy it into local computor.Click Vecode Help to read this Help document anytime.VecodeKit includes sub-directories as follows:* iOS_Mac* Android* test_swfiOS_Mac directory includes an iOS and a Mac example, showing you how to use Quartz Code under Swift and Object-C accordingly.Android directory includes an Android Studio project example, showing you how to use the exported Android graphics code.In the test_swf directory you can find some swf files for test.For more information about VecodeKit and how to use drawing code, please go to* [Use the Exported Drawing Code in iOS/Mac Project](./use_quartz_code.html)* [Use the Exported Drawing Code in Android Project](./use_android_graphics_code.html)"
+
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Use the Exported Drawing Code in Android Projects",
+"tags": "",
+"keywords": "",
+"url": "../en/use_android_graphics_code.html",
+"summary": "",
+"body": "For more informations about how to export Android graphics code, please go to [here](./use_vecode.html#export_anchor).Suppose we exported Android graphics code choosing the name PictureTiger, package name as `com.example`, and exported a document named PictureTiger.java, in which define a class `com.example.PictureTiger`.```javapackage com.example.PictureTiger;    import android.graphics.*;import com.vecodekit.GraphicsPicture;    public class PictureTiger extends GraphicsPicture{    xxxxx}```        Now we still missing  `com.vecodekit.GraphicsPicture` code, which can be found in VecodeKit.## Get VeocdeKit  You can download the latest VecodeKit on [GitHub ](https://github.com/DumbDuck/VecodeKit), or click the menu item Copy VecodeKit... and copy it into local computor.After decompressing, the codes under the VecodeKit/Android/src directory you can find package `com.vecodekit`.FYI VecodeKit/Android/VecodeKitExample serve as an Android Studio [project example](./home.html#android_example_anchor), showing how to use the exported drawing code.## How to Use GraphicsPictureAdd all codes in the folder VecodeKit/Android/src into your project, as well as the exported Android graphics code.For example, if we exported PictureTiger.java and define a class `com.example.PictureTiger`, after adding PictureTiger.java into the project, we can call the function:```javaPictureTiger tiger = new PictureTiger();tiger.drawInRect(rect, canvas, PictureContentMode.ScaleAspectFit);```and draw the picture on the canvas.Or use the following codes to transfer `tiger` into `Bitmap`.```javaBitmap bitmap = tiger.transToBitmap(100, 100, PictureContentMode.ScaleAspectFit);```## GraphicsPicture API### getWidth，getHeight```javapublic final float getWidth();public final float getHeight();```we can obtain the raw size of the picture. e.g, if you want an 2x Bitmap, you can use a section of codes as following:```javafloat bitmapWidth = tiger.getWidth() * 2;float bitmapHeight = tiger.getHeight() * 2;Bitmap bitmap = tiger.transToBitmap(bitmapWidth, bitmapHeight);```### drawInRectThis is the core function, which draws the picture on the canvas.```javapublic final void drawInRect(RectF rect, Canvas canvas, int contentMode);```the parameter rect signifies the area of the picture; and the parameter canvas the drawing enviornment. The last parameter `contentMode` explains how to resize the image in the convenience of adapting the introduction of rect, providing the view options as follows:```javapublic class PictureContentMode{    public static final int ScaleToFill       = 0;    public static final int ScaleAspectFit    = 1;    public static final int AspectFill        = 2;    public static final int Center            = 3;}```A tiger picture as bellow, is being drawn in the same rect (red frame), but with different modes, different results will be precented:            ScaleToFill        ScaleAspectFit        ScaleAspectFill        Center                                                                    ### transToBitmap```javapublic final Bitmap transToBitmap(float width, float height, int contentMode);```The function transfer GraphicsPicture into Bitmap. For the explaination of the last parameter `contentMode` please take the abovementioned as referrence."
+
+},
+
+
+
+
+{
+"title": "Use the Exported Drawing Code in iOS/Mac Project",
+"tags": "",
+"keywords": "",
+"url": "../en/use_quartz_code.html",
+"summary": "",
+"body": "For more informations about how to export Quartz code, please go to [here](./use_vecode.html#export_anchor).Suppose we exported Quartz code (Swift) choosing the name tiger, and exported a document named tiger.swf, in which created an Object `g_picture_tiger`, type is `VKQuartzPicture`:        public let g_picture_tiger = VKQuartzPicture(bounds: xxxx)    If chosen Quartz code (Objective-C), a similar Object would be created as well:    CG_EXTERN VKQuartzPicture g_picture_tiger;    Now we still missing  `VKQuartzPicture` code, which can be found in VecodeKit.## Get VeocdeKit You can download the latest VecodeKit on [GitHub ](https://github.com/DumbDuck/VecodeKit), or click the menu item Copy VecodeKit... and copy it into local computor.After decompressing, the codes under the VecodeKit/iOS_Mac/QuartzPicture directory defines `VKQuartzPicture`. FYI VecodeKit/iOS_Mac/QuartzPictureExample serve as [project example](./home.html#mac_example_anchor), showing how to use the exported drawing code.## How to Use QuartzPictureAdd all codes in the folder QuartzPicture into your project, as well as the exported Quartz code.For example, if we exported tiger.swift and created Object `g_picture_tiger`, after adding tiger.swift into the project, we can call the function:    VKQuartzPictureDrawInRect(g_picture_tiger, self.bounds, context, .ScaleAspectFit)    and draw the picture into the context.Under sanbox restriction of Mac App Store, when choosing Quartz code (Objective-C), Vecode can only export a code file with .c suffix and cannot export the corresponding .h file. Therefore when using the .c drawing code, an extra declaration shall be added. e.g, after adding the exported tiger.c to your project, you shall add the extra declaration as follow:     CG_EXTERN VKQuartzPicture g_picture_tiger;The Downloads Folder of Mac is beyond the restriction. When choosing to save the exported code in the Downloads Folder, Vecode can export both .c and .h files at the same time.### Tips:If a vector image contains too much details, generating numerous lines, such as 10 thousands and more, of drawing code, under such circumstance you can choose to export Quartz code (Objective-C) instead of Quartz code (Swift); otherwise you can also set the compile option -O0 for a particular drawing code file, making it compile without optimization. Both ways could make the project compile faster. ## QuartzPicture API### VKQuartzPictureIncluding bounds, through    picture.bounds.size    we can obtain the raw size of the picture. e.g, if you want an 2x image, you can use a section of codes as following:    var rect = CGRectZero    rect.size = picture.bounds.size    rect.size.width *= 2    rect.size.height *= 2    VKQuartzPictureDrawInRect(picture, rect, context, .ScaleAspectFit)### VKQuartzPictureDrawInRectThis is the core function, which draws the picture into the context.    func VKQuartzPictureDrawInRect(picture   : VKQuartzPicture,                                   _ rect    : CGRect,                                   _ context : CGContextRef,                                   _ mode    : VKPictureContentMode)The parameter picture signifies the to-be-drawn image, which is exported from Vecode; the parameter rect signifies the area of the picture; and the parameter context the drawing enviornment.The meaning of the last parameter is similar with `UIViewContentMode`, which explains how to resize the image in the convenience of adapting the introduction of rect.A tiger picture as bellow, is being drawn in the same rect (red frame), but with different modes, different results will be precented:            ScaleToFill        ScaleAspectFit        ScaleAspectFill        Center                                                                    ### Extension Function & ClassesQuartzPicture/ext has realized certain amount of Extension Functiones & Classes.VKQuartzPictureImage turns VKQuartzPicture into UIImage(iOS) or NSImage(mac).    func transToImage(size    : CGSize,                      _ color : UIColor,                      _ mode  : VKPictureContentMode = .ScaleAspectFit) -> UIImage    The \"size\" within this function is the image size, and check [here](./use_vecode.html#quartz_code_anchor) to see meaning of \"color\".VKQuartzPictureView draws VKQuartzPicture into UIView(iOS) or NSView(Mac)."
+
+},
+
+
+
+
+{
+"title": "Use Vecode",
+"tags": "",
+"keywords": "",
+"url": "../en/use_vecode.html",
+"summary": "",
+"body": "## UIThe Vecode interface has 4 main sections:* The right side the Parts Selection Column.* The top the Tool Bar.* Below the tool bar, the Frames Selection Bar* Below the frames selection bar, the Preview Zoon。## Parts Selection ColumnSome vector images contains several PARTS. As Adobe Flash can convert Shapes into Symbles, therefore every Symble has the corresbonding part(s). When choosing different parts in the column, the Preview Zoon will show the corresbonding image.## Tool BarThe widgits on the Tool Bar are devided into 4 groups.### Change UI ThemeYou can choose between 2 themes: Day Light & Dark Night.                        ### Export SettingsThere are 2 options:* Document Size stands for exporting original document size.* Minimum Area stands for exporting image right along its edges, leaving no surrounded transparent pixels.Check out the form below, the dash-line rectangle indicates the exported area.            Document Size        Minimum Area                            ### JumpThis 2 buttons can jump backward or forward to the ever-chosen parts whthin your action history, ecual to the menu items Jump Backward & Jump Forward.### Preview ScailingEqual to menu items Raw Size, Zoom Out, Zoom In.## Frames Selection BarIn some circumstance within 1 Flash file we'd new a few animation frames and each frame corresponding to 1 image.For example, the icons using in Vecode application were drawn in Flash, with each icon corresponding to 1 tagged frame, the numbers of frames are equal to those of the icons. And the tags' name can be reflected on the names of the exported image files so to avoid redundant work.                                ## Preview ZoonThe Preview Zoon occupies is the largest section of the interface. The graphic within the dash-line rectangle is the output of the export action. Open a vector file by dragging it into the preview zoon. ### Shortcut MenuHold your mouse within the preview zoon and right-click to callout the shortcut menu.The menu item Reload can reload the present file. ### Quick JumpPress `Command + mouse left-click` to choose a part in the preview zoon leads to a pop-up quick jump menu.## ExportOpen a vector image file, click menu item Export... or use shortcut `Command + S` to callout the export dialog, then choose the format of export file.### Quartz code Quartz code is a 2D drawing code for iOS/Mac application development. It can fit in Objective-C and Swift.When exporting Quartz code there is a checkbox option  No color When serve as an icon or a button, the color of the vector image usually need being change under certain circumstances. For instance, a button's normal status is in white color, and in red color while being pushed.In this case the original color of button image serves no purpose. Then we can choose No color to unset the color of the exported drawing code.When you want to change the color, e.g using a exported `g_picture_icon_moon`, you can use    g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.redColor())    g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.yellowColor())    g_picture_icon_moon.transToImage(CGSizeMake(30, 30), UIColor.blueColor())    to change it into different colors.Notice that if choosing  the No color option, there cannot be exporting a linear color effect image.### Android graphics codeAndroid graphics code, AKA the drawing code on Android platform. The dawing code is a java file, which require a pakage name in the process of exportation. The last package name that you input will be automactically recorded by the program. For example, when you export a file as PictureTiger.java, package name as `com.example`, it will automactically define a class `com.example.PictureTiger`.```javapackage com.example.PictureTiger;    import android.graphics.*;import com.vecodekit.GraphicsPicture;    public class PictureTiger extends GraphicsPicture{    xxxxx}```"
+
+},
+
+
+
+
+{
+"title": "Version History",
+"tags": "",
+"keywords": "",
+"url": "../en/version_history.html",
+"summary": "",
+"body": "## Version 1.1* Support exportation of Android graphics code.## Version 1.0.1* Fix Bug: There was a display issue of the exported svg in Adobe Illustrator.## Version 1.0* Support swf importation.* Support exportation of Quartz code (Objective-C)、Quartz code (Swift).* Support exportation of svg and png image.* 2 UI themes: Day light & Dark Night."
+
+},
+
+
+
+null
+]

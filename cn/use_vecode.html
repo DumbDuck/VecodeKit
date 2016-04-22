@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content=" ">
+    <title>使用 Vecode | Vecode Help</title>
+    <link rel="stylesheet" type="text/css" href="../css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/modern-business.css">
+    <link rel="stylesheet" type="text/css" href="../css/lavish-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/customstyles.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme-blue.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/jquery.navgoco.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/anchor.min.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="../js/customscripts.js"></script>
+    <link rel="shortcut icon" href="../common_images/favicon.ico" type="image/x-icon">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container topnavlinks">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="fa fa-home fa-lg navbar-brand" href="home.html">&nbsp;<span class="projectTitle"> Vecode v1.1</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- entries without drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li><a href="../en/use_vecode.html">英文</a></li>
+                    <li><a href="https://github.com/DumbDuck/VecodeKit" target="_blank">VecodeKit</a></li>
+                    <!-- entries with drop-downs appear here -->
+                    <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                    <li class="dropdown">
+                        <!-- special insertion -->
+                        <!-- Send feedback function -->
+                        <script>
+                        function SendLinkByMail(href) {
+                            var subject = "Vecode Help feedback";
+                            var body = "I have some feedback about the 使用 Vecode page: ";
+                            body += window.location.href;
+                            body += "";
+                            var uri = "mailto:dumbduck@126.com?subject=";
+                            uri += "Vecode 反馈";
+                            uri += "&body=";
+                            uri += "";
+                            window.location.href = uri;
+                        }
+                        </script>
+                        <li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> 反馈</a></li>
+            </div>
+            <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <script>
+                $(document).ready(function() {
+                    // Initialize navgoco with default options
+                    $("#mysidebar").navgoco({
+                        caretHtml: '',
+                        accordion: true,
+                        openClass: 'active', // open
+                        save: false, // leave false or nav highlighting doesn't work right
+                        cookie: {
+                            name: 'navgoco',
+                            expires: false,
+                            path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                        }
+                    });
+
+                    $("#collapseAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', false);
+                    });
+
+                    $("#expandAll").click(function(e) {
+                        e.preventDefault();
+                        $("#mysidebar").navgoco('toggle', true);
+                    });
+
+                });
+                </script>
+                <ul id="mysidebar" class="nav">
+                    <span class="siteTagline"></span>
+                    <span class="versionTagline"></span>
+                    <li><a href="#">帮助</a>
+                        <ul>
+                            <li><a href="../cn/home.html">介绍</a></li>
+                            <li class="active"><a href="../cn/use_vecode.html">使用 Vecode</a></li>
+                            <li><a href="../cn/use_quartz_code.html">在 iOS 或 Mac 项目中使用导出的代码</a></li>
+                            <li><a href="../cn/use_android_graphics_code.html">在 Android 项目中使用导出的代码</a></li>
+                            <li><a href="../cn/version_history.html">版本记录</a></li>
+                        </ul>
+                        <!-- if you aren't using the accordion, uncomment this block:
+
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
+            </div>
+            <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+            <script>
+            $("li.active").parents('li').toggleClass("active");
+            </script>
+            <!-- Content Column -->
+            <div class="col-md-9">
+                <div class="post-header">
+                    <h1 class="post-title-main">使用 Vecode</h1>
+                </div>
+                <div class="post-content">
+                    <!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+                    <script>
+                    $(document).ready(function() {
+                        // Handler for .ready() called.
+
+                        $('#toc').toc({
+                            minimumHeaders: 0,
+                            listType: 'ul',
+                            showSpeed: 0,
+                            headers: 'h2,h3,h4'
+                        });
+
+                        /* this offset helps account for the space taken up by the floating toolbar. */
+                        $('#toc').on('click', 'a', function() {
+                            var target = $(this.getAttribute('href')),
+                                scroll_target = target.offset().top
+
+                            $(window).scrollTop(scroll_target - 10);
+                            return false
+                        })
+
+                    });
+                    </script>
+                    <div id="toc"></div>
+                    <h2>界面</h2>
+                    <p><img src="../images/vecode_black.png" border="0" width="600"></p>
+                    <p>Vecode 的界面分成 4 大部分：</p>
+                    <ul>
+                        <li>最右边是<b>部件选择区</b>。</li>
+                        <li>最上面是<b>工具栏</b>。</li>
+                        <li>工具栏下面是<b>桢选择区</b>。</li>
+                        <li>桢选择区下面是<b>预览区</b>。</li>
+                    </ul>
+                    <h2>部件选择区</h2>
+                    <p>
+                        <image src="../images/ui_part.png" width="200" />
+                    </p>
+                    <p>有些矢量文件由多个子部件组成，比如 Flash 中可以将图形转换成元件，这样每个元件就会对应成子部件。在部件选择区可以选择不同的部件，在预览区显示。</p>
+                    <h2>工具栏</h2>
+                    <p>
+                        <image src="../images/ui_toolbar.png" height="31" />
+                    </p>
+                    <p>工具栏上面的控件，分成 4 个组。</p>
+                    <h3>切换主题</h3>
+                    <p>
+                        <image src="../images/toolbar_theme.png" height="31" />
+                    </p>
+                    <p>可以切换白天、黑夜两种主题风格。</p>
+                    <table border="0" style="table-layout:fixed;width:100%">
+                        <tr border="0">
+                            <td border="0" style="width:50%"><img src="../images/vecode_white.png" border="0" width="100%"></td>
+                            <td border="0" style="width:50%"><img src="../images/vecode_black.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h3>导出选项</h3>
+                    <p>
+                        <image src="../images/toolbar_include.png" height="81" />
+                    </p>
+                    <p>有两个选项：</p>
+                    <ul>
+                        <li>Document Size，表示导出的原始文档大小。</li>
+                        <li>Minimum Area，表示忽略原始文档大小，而导出真正的大小。</li>
+                    </ul>
+                    <p>见下表，虚线框表示最终导出的区域。</p>
+                    <table border="1" style="table-layout:fixed;width:100%">
+                        <tr border="0" style="text-align:center">
+                            <td border="0" style="width:50%">Document Size</th>
+                                <td border="0" style="width:50%">Minimum Area</th>
+                        </tr>
+                        <tr border="0">
+                            <td border="0" style="width:50%"><img src="../images/toolbar_document_size.png" border="0" width="100%"></td>
+                            <td border="0" style="width:50%"><img src="../images/toolbar_minimum_area.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h3>跳转</h3>
+                    <p>
+                        <image src="../images/toolbar_jump.png" height="31" />
+                    </p>
+                    <p>切换部件之后，可以跳转到前一部件或者后一部件，跟菜单项 <b>Jump Back</b> 和 <b>Jump Forward</b> 对应。</p>
+                    <p>
+                        <image src="../images/menu_view.png" height="197" />
+                    </p>
+                    <h3>预览缩放</h3>
+                    <p>
+                        <image src="../images/toolbar_zoom.png" height="31" />
+                    </p>
+                    <p>跟菜单项 <b>Real Size</b>、<b>Zoom Out</b>、<b>Zoom In</b> 对应。</p>
+                    <p>
+                        <image src="../images/menu_view.png" height="197" />
+                    </p>
+                    <h2>桢选择区</h2>
+                    <p>
+                        <image src="../images/frame_are.png" height="64" />
+                    </p>
+                    <p>有时我们会将多个图片放到同一个文件当中，并且新建多个动画桢，每一桢对应于一张图片。通过桢选择区可以选择对应的动画桢。</p>
+                    <p>比如本软件的用到的每个图标就对应于一桢，并且在 Flash 软件中打上标签。标签的文字就是默认的导出的文件名字，这样就不用反复命名。</p>
+                    <table border="0" style="table-layout:fixed;width:100%">
+                        <tr border="0">
+                            <td border="0" style="width:33%"><img src="../images/icon_0.png" border="0" width="100%"></td>
+                            <td border="0" style="width:33%"><img src="../images/icon_1.png" border="0" width="100%"></td>
+                            <td border="0" style="width:33%"><img src="../images/icon_2.png" border="0" width="100%"></td>
+                        </tr>
+                    </table>
+                    <h2>预览区</h2>
+                    <p>预览区占据界面的主要部分，虚线框中的图形就是最终的导出效果。将矢量图文件拖进预览区就可以打开文件。</p>
+                    <h3>右键菜单</h3>
+                    <p>在预览区点击鼠标右键，可以调出快捷菜单。</p>
+                    <p>
+                        <image src="../images/preview_menu.png" height="171" />
+                    </p>
+                    <p><b>Reload</b> 菜单项可以重新载入当前的文件。</p>
+                    <h3>快速跳转</h3>
+                    <p>
+                        <image src="../images/jump.png" width="400" />
+                    </p>
+                    <p>在预览区，按 <code>Command + 鼠标左键</code> 选择对应的部件，可以弹出快速跳转菜单。</p>
+                    <p>
+                        <a id="export_anchor"></a>
+                    </p>
+                    <h2>导出</h2>
+                    <p>打开矢量图之后，点击菜单项 <b>Export...</b> 或使用快捷键 <code>Command + S</code>，调出导出界面，从下拉框中选择各种导出格式。</p>
+                    <p>
+                        <a id="quartz_code_anchor"></a>
+                    </p>
+                    <h3>Quartz code</h3>
+                    <p>Quartz code 是开发 iOS 或者 Mac 软件使用的 Quartz 2D 绘图代码。可以选择 Objective-C 语言或 Swift 语言。</p>
+                    <p>Quartz code 有一个勾选框<b> No color </b>。</p>
+                    <p>
+                        <image src="../images/save_code.png" height="65" />
+                    </p>
+                    <p>矢量图作为 icon 的或者一些按钮图片时，经常需要根据实际情况来改变颜色。比如按钮普通状态下是白色，按下状态是红色等。这样图片本身的颜色是没有意义的，这时可以在勾选 <b>No color</b>，导出的绘图代码就不会设置颜色。</p>
+                    <p>而在运行时修改颜色，比如已经导出同一个 <code>g_picture_icon_moon</code>，可以使用</p>
+                    <div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">g_picture_icon_moon</span><span class="p">.</span><span class="n">transToImage</span><span class="p">(</span><span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">redColor</span><span class="p">())</span>
+<span class="n">g_picture_icon_moon</span><span class="p">.</span><span class="n">transToImage</span><span class="p">(</span><span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">yellowColor</span><span class="p">())</span>
+<span class="n">g_picture_icon_moon</span><span class="p">.</span><span class="n">transToImage</span><span class="p">(</span><span class="n">CGSizeMake</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">blueColor</span><span class="p">())</span>
+</code></pre></div>
+                    <p>转换成各种颜色的图片。</p>
+                    <p>注意：勾选 <b>No color</b> 之后，就不能输出渐变了。</p>
+                    <h3>Android graphics code</h3>
+                    <p>Android graphics code 顾名思义，就是 Android 平台上的绘图代码。</p>
+                    <p>
+                        <image src="../images/save_android_code.png" width="379" height="69" />
+                    </p>
+                    <p>Android 平台的绘图代码是 java 文件，需要在导出时候输入包(package）名。程序会自动记录下上一次导出时输入的包名。</p>
+                    <p>比如您导出时候输入的文件名为 PictureTiger.java, 包名为 <code>com.example</code>，就会自动定义类 <code>com.example.PictureTiger</code>。</p>
+                    <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">PictureTiger</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.graphics.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.vecodekit.GraphicsPicture</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PictureTiger</span> <span class="kd">extends</span> <span class="n">GraphicsPicture</span>
+<span class="o">{</span>
+    <span class="n">xxxxx</span>
+<span class="o">}</span>
+</code></pre></div>
+                    <!-- <div class="tags">
+    
+</div> -->
+                </div>
+                <footer>
+                    <!--             <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Your company. All rights reserved. <br />
+ Site last generated: Apr 22, 2016 <br />
+<p><img src="../../common_images/company_logo.png"/></p>
+                </div>
+            </div> -->
+                </footer>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+</body>
+
+</html>
