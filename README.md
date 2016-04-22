@@ -20,6 +20,11 @@ FYI Quartz code is a drawing code for iOS and OS X. Android graphics code, AKA t
 
 After turning vector image to drawing code, then add the drawing code into the project and compile. During runtime, the image will be redrawn and rescale size without distortion.
 
+See More:
+
+* [中文文档](http://dumbduck.github.io/VecodeKit/cn/home.html)
+* [English Doucment](http://dumbduck.github.io/VecodeKit/en/home.html)
+
 ## VecodeKit
 We've coded project example VecodeKit, showing how to use the exported drawing codes.
 
@@ -41,16 +46,3 @@ VecodeKit includes sub-directories as follows:
 
 In the <b>test_swf</b> directory you can find some swf files for test.
 
-## Version History
-
-### v1.1
-* Support exportation of Android graphics code.
-
-### v1.0.1
-* Fix Bug: There was a display issue of the exported svg in Adobe Illustrator.
-
-### v1.0
-* Support swf importation.
-* Support exportation of Quartz code (Objective-C)、Quartz code (Swift).
-* Support exportation of svg and png image.
-* 2 UI themes: Day light & Dark Night.
