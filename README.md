@@ -2,7 +2,7 @@
 
 <image src="./images/vecode_icon.png" width="200" height="200"/>
 
-Vecode is a blending word which combines <b>Vector</b> and <b>Code</b>. It helps developers and designers turn vector images to drawing codes or svg images.
+Vecode is a blending word which combines <b>Vector</b> and <b>Code</b>. It helps developers and designers turn vector images to drawing codes or svg images. You can download it on [Mac AppStore](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1084265083&mt=12).
 
 For now, Vecode is able to import:
 
