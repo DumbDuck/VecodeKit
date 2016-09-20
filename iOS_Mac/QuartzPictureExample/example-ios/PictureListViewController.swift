@@ -5,7 +5,7 @@ private let kCellID =  "CellId"
 
 class PictureListViewController : UITableViewController
 {
-    private let _pictures = [
+    fileprivate let _pictures = [
         ("tiger", g_picture_tiger),
         ("icons", g_picture_icons),
         ("snow_woman", g_picture_snow_woman),
@@ -17,34 +17,34 @@ class PictureListViewController : UITableViewController
         super.viewDidLoad()
         self.tableView.rowHeight = 100
         self.title = NSLocalizedString("Pictures", comment: "")
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: kCellID)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellID)
         
         if #available(iOS 9.0, *) {
             self.tableView.cellLayoutMarginsFollowReadableWidth = false
         }
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return _pictures.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(kCellID, forIndexPath: indexPath)
-        let (title, picture) = _pictures[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: kCellID, for: indexPath)
+        let (title, picture) = _pictures[(indexPath as NSIndexPath).row]
         
         let imageHeight = self.tableView.rowHeight - 10
         cell.textLabel?.text = title
-        cell.imageView?.image = picture.transToImage(CGSizeMake(imageHeight, imageHeight))
-        cell.accessoryType = .DisclosureIndicator
+        cell.imageView?.image = picture.transToImage(CGSize(width: imageHeight, height: imageHeight))
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let (title, picture) = _pictures[indexPath.row]
+        let (title, picture) = _pictures[(indexPath as NSIndexPath).row]
         let aViewController = PictureViewController(picture: picture)
         aViewController.title = title
         self.navigationController?.pushViewController(aViewController, animated: true)

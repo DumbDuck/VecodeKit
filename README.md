@@ -11,7 +11,8 @@ For now, Vecode is able to import:
 Able to export:
 
 * Quartz code (Objective-C)
-* Quartz code (Swift)
+* Quartz code (Swift 2.3)
+* Quartz code (Swift 3.0)
 * Android graphics code
 * svg image
 * png image

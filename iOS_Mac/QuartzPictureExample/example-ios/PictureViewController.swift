@@ -11,16 +11,16 @@ private class PictureView : UIView
         }
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         guard let picture = picture else { return }
-        VKQuartzPictureDrawInRect(picture, self.bounds, context, .ScaleAspectFit)
+        VKQuartzPictureDrawInRect(picture, self.bounds, context, .scaleAspectFit)
     }
 }
 
 class PictureViewController : UIViewController
 {
-    private let _pictureView = PictureView()
+    fileprivate let _pictureView = PictureView()
     
     init(picture: VKQuartzPicture)
     {
@@ -34,7 +34,7 @@ class PictureViewController : UIViewController
     
     override func loadView() {
         self.view = _pictureView
-        _pictureView.backgroundColor = UIColor.lightGrayColor()
+        _pictureView.backgroundColor = UIColor.lightGray
     }
 }
 

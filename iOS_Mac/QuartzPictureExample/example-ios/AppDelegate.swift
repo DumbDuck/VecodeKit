@@ -4,14 +4,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-    private var _window : UIWindow!
+    fileprivate var _window : UIWindow!
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        let listViewController = PictureListViewController(style: .Plain)
+        let listViewController = PictureListViewController(style: .plain)
         let navigationViewController = UINavigationController(rootViewController: listViewController)
         
-        _window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        _window = UIWindow(frame: UIScreen.main.bounds)
         _window.rootViewController = navigationViewController
         _window.makeKeyAndVisible()
         
