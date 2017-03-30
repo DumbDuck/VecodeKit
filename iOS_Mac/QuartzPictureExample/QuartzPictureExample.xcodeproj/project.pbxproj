@@ -17,6 +17,10 @@
 		2E36D1321C75D850000E2F70 /* tiger.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E36D1271C75D850000E2F70 /* tiger.c */; };
 		2E36D13C1C75DB29000E2F70 /* river_man.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E36D13A1C75DB29000E2F70 /* river_man.c */; };
 		2E36D1441C75F428000E2F70 /* icons.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E36D1421C75F428000E2F70 /* icons.c */; };
+		2E919F221E8CAD770021AC7B /* VKQuartzPictureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E919F1E1E8CAD770021AC7B /* VKQuartzPictureImage.swift */; };
+		2E919F231E8CAD770021AC7B /* VKQuartzPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E919F1F1E8CAD770021AC7B /* VKQuartzPictureView.swift */; };
+		2E919F241E8CAD770021AC7B /* VKQuartzPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E919F201E8CAD770021AC7B /* VKQuartzPicture.swift */; };
+		2E919F2E1E8CAD9C0021AC7B /* VKQuartzPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E919F281E8CAD9C0021AC7B /* VKQuartzPicture.m */; };
 		2EA5938F1C9C793B0021B173 /* all_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EA5938D1C9C793B0021B173 /* all_test.c */; };
 		2EC464D41C7472ED00F905D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC464D31C7472ED00F905D9 /* AppDelegate.swift */; };
 		2EC464DB1C7472ED00F905D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC464DA1C7472ED00F905D9 /* Assets.xcassets */; };
@@ -29,14 +33,6 @@
 		2EF34E681D8CE74600054CF6 /* river_man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34E631D8CE74600054CF6 /* river_man.swift */; };
 		2EF34E691D8CE74600054CF6 /* snow_woman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34E641D8CE74600054CF6 /* snow_woman.swift */; };
 		2EF34E6A1D8CE74600054CF6 /* tiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34E651D8CE74600054CF6 /* tiger.swift */; };
-		2EF34EEB1D8CED8700054CF6 /* VKQuartzPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE01D8CED8700054CF6 /* VKQuartzPicture.m */; };
-		2EF34EEC1D8CED8700054CF6 /* VKQuartzPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE01D8CED8700054CF6 /* VKQuartzPicture.m */; };
-		2EF34EF31D8CED8700054CF6 /* VKQuartzPictureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE81D8CED8700054CF6 /* VKQuartzPictureImage.swift */; };
-		2EF34EF41D8CED8700054CF6 /* VKQuartzPictureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE81D8CED8700054CF6 /* VKQuartzPictureImage.swift */; };
-		2EF34EF51D8CED8700054CF6 /* VKQuartzPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE91D8CED8700054CF6 /* VKQuartzPictureView.swift */; };
-		2EF34EF61D8CED8700054CF6 /* VKQuartzPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EE91D8CED8700054CF6 /* VKQuartzPictureView.swift */; };
-		2EF34EF71D8CED8700054CF6 /* VKQuartzPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EEA1D8CED8700054CF6 /* VKQuartzPicture.swift */; };
-		2EF34EF81D8CED8700054CF6 /* VKQuartzPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF34EEA1D8CED8700054CF6 /* VKQuartzPicture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +55,11 @@
 		2E36D13B1C75DB29000E2F70 /* river_man.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = river_man.h; sourceTree = "<group>"; };
 		2E36D1421C75F428000E2F70 /* icons.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = icons.c; sourceTree = "<group>"; };
 		2E36D1431C75F428000E2F70 /* icons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icons.h; sourceTree = "<group>"; };
+		2E919F1E1E8CAD770021AC7B /* VKQuartzPictureImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPictureImage.swift; sourceTree = "<group>"; };
+		2E919F1F1E8CAD770021AC7B /* VKQuartzPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPictureView.swift; sourceTree = "<group>"; };
+		2E919F201E8CAD770021AC7B /* VKQuartzPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPicture.swift; sourceTree = "<group>"; };
+		2E919F271E8CAD9C0021AC7B /* VKQuartzPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKQuartzPicture.h; sourceTree = "<group>"; };
+		2E919F281E8CAD9C0021AC7B /* VKQuartzPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKQuartzPicture.m; sourceTree = "<group>"; };
 		2EA5938D1C9C793B0021B173 /* all_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = all_test.c; sourceTree = "<group>"; };
 		2EA5938E1C9C793B0021B173 /* all_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all_test.h; sourceTree = "<group>"; };
 		2EC464D11C7472ED00F905D9 /* example-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +76,6 @@
 		2EF34E631D8CE74600054CF6 /* river_man.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = river_man.swift; sourceTree = "<group>"; };
 		2EF34E641D8CE74600054CF6 /* snow_woman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snow_woman.swift; sourceTree = "<group>"; };
 		2EF34E651D8CE74600054CF6 /* tiger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tiger.swift; sourceTree = "<group>"; };
-		2EF34EDF1D8CED8700054CF6 /* VKQuartzPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKQuartzPicture.h; sourceTree = "<group>"; };
-		2EF34EE01D8CED8700054CF6 /* VKQuartzPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKQuartzPicture.m; sourceTree = "<group>"; };
-		2EF34EE81D8CED8700054CF6 /* VKQuartzPictureImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPictureImage.swift; sourceTree = "<group>"; };
-		2EF34EE91D8CED8700054CF6 /* VKQuartzPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPictureView.swift; sourceTree = "<group>"; };
-		2EF34EEA1D8CED8700054CF6 /* VKQuartzPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKQuartzPicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +99,7 @@
 		2E36D03B1C75A534000E2F70 /* example-mac */ = {
 			isa = PBXGroup;
 			children = (
+				2E919F251E8CAD9C0021AC7B /* QuartzPicture */,
 				2E36D11A1C75D850000E2F70 /* pictures */,
 				2E36D04E1C75A7C2000E2F70 /* PictureView.h */,
 				2E36D04F1C75A7C2000E2F70 /* PictureView.m */,
@@ -160,7 +157,6 @@
 		2E6F55951C465D7C00F22745 = {
 			isa = PBXGroup;
 			children = (
-				2EF34EDD1D8CED8700054CF6 /* QuartzPicture */,
 				2EC464D21C7472ED00F905D9 /* example-ios */,
 				2E36D03B1C75A534000E2F70 /* example-mac */,
 				2E6F559F1C465D7C00F22745 /* Products */,
@@ -176,9 +172,55 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2E919F181E8CAD770021AC7B /* QuartzPicture */ = {
+			isa = PBXGroup;
+			children = (
+				2E919F1C1E8CAD770021AC7B /* swift */,
+			);
+			name = QuartzPicture;
+			path = ../../QuartzPicture;
+			sourceTree = "<group>";
+		};
+		2E919F1C1E8CAD770021AC7B /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				2E919F1D1E8CAD770021AC7B /* ext */,
+				2E919F201E8CAD770021AC7B /* VKQuartzPicture.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		2E919F1D1E8CAD770021AC7B /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				2E919F1E1E8CAD770021AC7B /* VKQuartzPictureImage.swift */,
+				2E919F1F1E8CAD770021AC7B /* VKQuartzPictureView.swift */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		2E919F251E8CAD9C0021AC7B /* QuartzPicture */ = {
+			isa = PBXGroup;
+			children = (
+				2E919F261E8CAD9C0021AC7B /* objc */,
+			);
+			name = QuartzPicture;
+			path = ../../QuartzPicture;
+			sourceTree = "<group>";
+		};
+		2E919F261E8CAD9C0021AC7B /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				2E919F271E8CAD9C0021AC7B /* VKQuartzPicture.h */,
+				2E919F281E8CAD9C0021AC7B /* VKQuartzPicture.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
 		2EC464D21C7472ED00F905D9 /* example-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2E919F181E8CAD770021AC7B /* QuartzPicture */,
 				2E36D1001C75D834000E2F70 /* pictures */,
 				2EC464F91C74742A00F905D9 /* PictureListViewController.swift */,
 				2EC4650E1C74791000F905D9 /* PictureViewController.swift */,
@@ -188,43 +230,6 @@
 				2EC464DF1C7472ED00F905D9 /* Info.plist */,
 			);
 			path = "example-ios";
-			sourceTree = "<group>";
-		};
-		2EF34EDD1D8CED8700054CF6 /* QuartzPicture */ = {
-			isa = PBXGroup;
-			children = (
-				2EF34EDE1D8CED8700054CF6 /* objc */,
-				2EF34EE61D8CED8700054CF6 /* swift3 */,
-			);
-			name = QuartzPicture;
-			path = ../QuartzPicture;
-			sourceTree = "<group>";
-		};
-		2EF34EDE1D8CED8700054CF6 /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				2EF34EDF1D8CED8700054CF6 /* VKQuartzPicture.h */,
-				2EF34EE01D8CED8700054CF6 /* VKQuartzPicture.m */,
-			);
-			path = objc;
-			sourceTree = "<group>";
-		};
-		2EF34EE61D8CED8700054CF6 /* swift3 */ = {
-			isa = PBXGroup;
-			children = (
-				2EF34EE71D8CED8700054CF6 /* ext */,
-				2EF34EEA1D8CED8700054CF6 /* VKQuartzPicture.swift */,
-			);
-			path = swift3;
-			sourceTree = "<group>";
-		};
-		2EF34EE71D8CED8700054CF6 /* ext */ = {
-			isa = PBXGroup;
-			children = (
-				2EF34EE81D8CED8700054CF6 /* VKQuartzPictureImage.swift */,
-				2EF34EE91D8CED8700054CF6 /* VKQuartzPictureView.swift */,
-			);
-			path = ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,15 +338,12 @@
 				2E36D1441C75F428000E2F70 /* icons.c in Sources */,
 				2E36D0411C75A534000E2F70 /* main.m in Sources */,
 				2EE066741C9D46D800A0565B /* world.c in Sources */,
-				2EF34EF61D8CED8700054CF6 /* VKQuartzPictureView.swift in Sources */,
 				2E36D13C1C75DB29000E2F70 /* river_man.c in Sources */,
-				2EF34EF41D8CED8700054CF6 /* VKQuartzPictureImage.swift in Sources */,
-				2EF34EF81D8CED8700054CF6 /* VKQuartzPicture.swift in Sources */,
 				2E36D04D1C75A5C6000E2F70 /* AppMainView.m in Sources */,
 				2EA5938F1C9C793B0021B173 /* all_test.c in Sources */,
 				2E36D03E1C75A534000E2F70 /* AppDelegate.m in Sources */,
 				2E36D0501C75A7C2000E2F70 /* PictureView.m in Sources */,
-				2EF34EEC1D8CED8700054CF6 /* VKQuartzPicture.m in Sources */,
+				2E919F2E1E8CAD9C0021AC7B /* VKQuartzPicture.m in Sources */,
 				2E36D12E1C75D850000E2F70 /* snow_woman.c in Sources */,
 				2E36D1321C75D850000E2F70 /* tiger.c in Sources */,
 			);
@@ -353,16 +355,15 @@
 			files = (
 				2EF34E6A1D8CE74600054CF6 /* tiger.swift in Sources */,
 				2EF34E661D8CE74600054CF6 /* all_test.swift in Sources */,
+				2E919F221E8CAD770021AC7B /* VKQuartzPictureImage.swift in Sources */,
 				2EF34E671D8CE74600054CF6 /* icons.swift in Sources */,
 				2EC464FA1C74742A00F905D9 /* PictureListViewController.swift in Sources */,
-				2EF34EF71D8CED8700054CF6 /* VKQuartzPicture.swift in Sources */,
-				2EF34EF51D8CED8700054CF6 /* VKQuartzPictureView.swift in Sources */,
 				2EF34E681D8CE74600054CF6 /* river_man.swift in Sources */,
-				2EF34EEB1D8CED8700054CF6 /* VKQuartzPicture.m in Sources */,
+				2E919F231E8CAD770021AC7B /* VKQuartzPictureView.swift in Sources */,
+				2E919F241E8CAD770021AC7B /* VKQuartzPicture.swift in Sources */,
 				2EC4650F1C74791000F905D9 /* PictureViewController.swift in Sources */,
 				2EC464D41C7472ED00F905D9 /* AppDelegate.swift in Sources */,
 				2EF34E691D8CE74600054CF6 /* snow_woman.swift in Sources */,
-				2EF34EF31D8CED8700054CF6 /* VKQuartzPictureImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

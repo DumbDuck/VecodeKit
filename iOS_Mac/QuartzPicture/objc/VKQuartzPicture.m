@@ -1,7 +1,7 @@
 /*
  The MIT License (MIT)
 
- Copyright (c) 2016 DumbDuck dumbduck@126.com
+ Copyright (c) 2017 DumbDuck dumbduck@126.com
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -24,29 +24,24 @@
 
 #import "VKQuartzPicture.h"
 
-VKQuartzPicture VKQuartzPictureNull()
-{
+VKQuartzPicture VKQuartzPictureNull() {
     VKQuartzPicture picture = { CGRectNull, NULL };
     return picture;
 }
 
-void VKQuartzPictureDrawInRect(VKQuartzPicture picture, CGRect rect, CGContextRef context, VKPictureContentMode mode)
-{
-    if (picture.drawer == NULL)
-    {
+void VKQuartzPictureDrawInRect(VKQuartzPicture picture, CGRect rect, CGContextRef context, VKPictureContentMode mode) {
+    if (picture.drawer == NULL) {
         return;
     }
 
-    if (picture.bounds.size.width < FLT_EPSILON || picture.bounds.size.height < FLT_EPSILON)
-    {
+    if (picture.bounds.size.width < FLT_EPSILON || picture.bounds.size.height < FLT_EPSILON) {
         return;
     }
 
     CGFloat scaleX = rect.size.width / picture.bounds.size.width;
     CGFloat scaleY = rect.size.height / picture.bounds.size.height;
 
-    switch (mode)
-    {
+    switch (mode) {
         case VKPictureContentModeScaleAspectFit:
             scaleX = MIN(scaleX, scaleY);
             scaleY = scaleX;

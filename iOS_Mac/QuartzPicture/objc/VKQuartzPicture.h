@@ -1,7 +1,7 @@
 /*
  The MIT License (MIT)
 
- Copyright (c) 2016 DumbDuck dumbduck@126.com
+ Copyright (c) 2017 DumbDuck dumbduck@126.com
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -34,8 +34,7 @@ typedef NS_ENUM(NSInteger, VKPictureContentMode) {
 
 #ifndef __VKQUARTZPICTURE_STRUCT__
 #define __VKQUARTZPICTURE_STRUCT__
-typedef struct
-{
+typedef struct {
     CGRect bounds;
     void (*_Nullable drawer)(_Nonnull CGContextRef);
 } VKQuartzPicture;
@@ -46,6 +45,4 @@ CG_EXTERN void VKQuartzPictureDrawInRect(VKQuartzPicture picture,
                                          CGRect rect,
                                          _Nonnull CGContextRef context,
                                          VKPictureContentMode contentMode);
-
-
 

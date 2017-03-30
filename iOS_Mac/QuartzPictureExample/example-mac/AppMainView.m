@@ -10,19 +10,16 @@
 #import "world.h"
 
 ////////////////
-@implementation AppMainView
-{
+@implementation AppMainView {
     VKQuartzPicture* _pictures;
     size_t _numOfPictures;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     free(_pictures);
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     [self layoutSubviews];
 
@@ -31,12 +28,8 @@
     [self.tableView setDelegate:self];
 
     VKQuartzPicture pictures[] = {
-        g_picture_tiger,
-        g_picture_icons,
-        g_picture_world,
-        g_picture_snow_woman,
-        g_picture_river_man,
-        g_picture_all_test,
+        g_picture_tiger,      g_picture_icons,     g_picture_world,
+        g_picture_snow_woman, g_picture_river_man, g_picture_all_test,
     };
 
     _numOfPictures = sizeof(pictures) / sizeof(pictures[0]);
@@ -46,8 +39,7 @@
     self.previewView.picture = _pictures[0];
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     const CGFloat kLeftWidth = 200;
     CGRect rt = self.bounds;
     CGRect leftFrame = rt;
@@ -60,30 +52,27 @@
     self.previewView.frame = rightFrame;
 }
 
-- (void)resizeSubviewsWithOldSize:(NSSize)oldSize
-{
+- (void)resizeSubviewsWithOldSize:(NSSize)oldSize {
     [super resizeSubviewsWithOldSize:oldSize];
     [self layoutSubviews];
 }
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView*)tableView
-{
+- (NSInteger)numberOfRowsInTableView:(NSTableView*)tableView {
     return _numOfPictures;
 }
 
-- (NSView*)tableView:(NSTableView*)tableView viewForTableColumn:(nullable NSTableColumn*)tableColumn row:(NSInteger)row
-{
+- (NSView*)tableView:(NSTableView*)tableView
+    viewForTableColumn:(nullable NSTableColumn*)tableColumn
+                   row:(NSInteger)row {
     assert(row < _numOfPictures);
     PictureView* view = [[PictureView alloc] init];
     view.picture = _pictures[row];
     return view;
 }
 
-- (void)tableViewSelectionDidChange:(NSNotification*)notification
-{
+- (void)tableViewSelectionDidChange:(NSNotification*)notification {
     NSInteger row = self.tableView.selectedRow;
-    if (row < _numOfPictures)
-    {
+    if (row < _numOfPictures) {
         self.previewView.picture = _pictures[row];
     }
 }
